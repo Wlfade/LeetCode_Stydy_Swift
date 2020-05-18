@@ -14,6 +14,7 @@
 		4EB2B2C924722F52003B3DEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EB2B2C824722F52003B3DEE /* Assets.xcassets */; };
 		4EB2B2CC24722F52003B3DEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB2B2CA24722F52003B3DEE /* LaunchScreen.storyboard */; };
 		4EB2B2D6247239A6003B3DEE /* SolutionOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB2B2D5247239A6003B3DEE /* SolutionOne.swift */; };
+		4EB2B2D82472421C003B3DEE /* SolutionTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB2B2D72472421C003B3DEE /* SolutionTwo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4EB2B2CB24722F52003B3DEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EB2B2CD24722F52003B3DEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EB2B2D5247239A6003B3DEE /* SolutionOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolutionOne.swift; sourceTree = "<group>"; };
+		4EB2B2D72472421C003B3DEE /* SolutionTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolutionTwo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				4EB2B2C124722F50003B3DEE /* SceneDelegate.swift */,
 				4EB2B2C324722F50003B3DEE /* ViewController.swift */,
 				4EB2B2D5247239A6003B3DEE /* SolutionOne.swift */,
+				4EB2B2D72472421C003B3DEE /* SolutionTwo.swift */,
 				4EB2B2C524722F50003B3DEE /* Main.storyboard */,
 				4EB2B2C824722F52003B3DEE /* Assets.xcassets */,
 				4EB2B2CA24722F52003B3DEE /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EB2B2C424722F50003B3DEE /* ViewController.swift in Sources */,
+				4EB2B2D82472421C003B3DEE /* SolutionTwo.swift in Sources */,
 				4EB2B2C024722F50003B3DEE /* AppDelegate.swift in Sources */,
 				4EB2B2C224722F50003B3DEE /* SceneDelegate.swift in Sources */,
 				4EB2B2D6247239A6003B3DEE /* SolutionOne.swift in Sources */,

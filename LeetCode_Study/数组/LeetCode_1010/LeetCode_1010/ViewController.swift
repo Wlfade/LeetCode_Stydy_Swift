@@ -12,8 +12,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let timeArr = [30,20,150,100,40];
-        print(SolutionOne.numPairsDivisibleBy60(timeArr));
+        let timeArr = [32,22,148,100,38];
+//        print(SolutionOne.numPairsDivisibleBy60(timeArr));
+
+        print(SolutionTwo.numPairsDivisibleBy60(timeArr));
         
     }
 
