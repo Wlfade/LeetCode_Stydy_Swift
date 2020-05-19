@@ -17,7 +17,7 @@ class ViewController: UIViewController {
 //        CalendarT()
 //        dataCompare()
         
-//        print(SolutionTw.dayOfTheWeek(1, 1, 1971))
+        print(SolutionTwo.dayOfTheWeek(19, 5, 2020))
 
     }
     
