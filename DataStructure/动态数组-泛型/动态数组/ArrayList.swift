@@ -10,18 +10,18 @@ import UIKit
 private var DEFAULT_CAPACITY : Int = 10;
 private var ELEMENR_NOT_FOUNT : Int = -1;
 
-class ArrayList: NSObject {
-    var size : Int = 0
-    var elements : [Int]!
+class ArrayList<T>: NSObject {
+    private var size : Int = 0
+    private var elements : [T]!
+    private var defaultValue: T
 
     //初始化
-    init(capacity:Int) {
-        super.init()
+    init(capacity:Int, defaultValue: T) {
         var temp = capacity;
-
+        self.defaultValue = defaultValue
         temp = (temp < DEFAULT_CAPACITY) ? DEFAULT_CAPACITY : temp
-        elements = Array(repeating: 0, count: temp)
-        
+        self.elements = [T](repeating: defaultValue, count: temp)
+//        elements = Array(repeating: "", count: temp) as? [T]
     }
     
     /// 元素的数量
@@ -36,7 +36,7 @@ class ArrayList: NSObject {
     }
     /// 是否包含摸个元素
     /// - Returns: 是否为空
-    func contains(_ element:Int) -> Bool {
+    func contains(_ element:T) -> Bool {
         return indexOf(element: element) != ELEMENR_NOT_FOUNT
     }
 
@@ -45,7 +45,7 @@ class ArrayList: NSObject {
     /// - Parameters:
     ///   - index: 索引
     ///   - element: 插入的值
-    func insert(_ index : Int , _ element : Int){
+    func insert(_ index : Int , _ element : T){
         rangeCheckForAdd(index)
         ensureCapacity(capacity: size + 1) //确保容量足够大
         
@@ -56,31 +56,33 @@ class ArrayList: NSObject {
         size += 1
     }
     /// 数据添加
-    func add(_ element : Int){
+    func add(_ element : T){
         insert(size, element);
     }
     /// 数据获取
-    func get(_ index : Int) -> Int{
+    func get(_ index : Int) -> T{
         rangeCheck(index)
         return elements[index]
     }
     
     /// 设置index位置的元素
-    func set(_ index : Int, _ element : Int) -> Int{
+    func set(_ index : Int, _ element : Int) -> T{
         rangeCheck(index)
         let old = elements[index]
-        elements[index] = element
+        elements[index] = element as! T
         return old
         
     }
     
-    func remove(_ index : Int)->Int{
+    func remove(_ index : Int)->T{
         rangeCheck(index)
         let old = elements[index]
         for i in 0..<size-1 {
             elements[i] = elements[i+1]
         }
-        elements[size - 1] = 0//删除元素后，最后一个置为nil
+        
+        elements[size] = defaultValue//删除元素后，最后一个置为nil
+        size -= 1
         return old
     }
     
@@ -88,17 +90,22 @@ class ArrayList: NSObject {
     /// 查看元素的索引
     /// - Parameter element: 元素
     /// - Returns: 索引
-    func indexOf(element : Int) -> Int {
-        if (element == nil){
+    func indexOf(element : T) -> Int {
+//        [result isEqual:[NSNull null]]
+        if (element is NSNull){
             for i in 0..<size {
-                if elements[i] == nil {
+                if elements[i] is NSNull {
                     return i;
                 }
             }
-        }else{
+        }
+        else{
+            let element : Person = element as! Person
+
             for i in 0..<size {
-                
-                if elements[i] == element {
+                let ele : Person = elements[i] as! Person
+
+                if ele.isEqual(element){
                     return i;
                 }
             }
@@ -110,7 +117,7 @@ class ArrayList: NSObject {
     /// 清空所有元素
     func clear(){
         for i in 0..<size {
-            elements[i] = 0;
+            elements[i] = NSNull() as! T;
         }
         size = 0
     }
@@ -125,7 +132,11 @@ class ArrayList: NSObject {
         //1.5倍
         let newCapacity : Int = oldCapacity + (oldCapacity >> 1);
         
-        var newElements = Array(repeating: 0, count: newCapacity)
+//        var newElements = Array(repeating: 0, count: newCapacity) as? [T]
+//        var newElements = Array(repeating: NSNull.self, count: newCapacity) as? [T]
+        
+        var newElements = [T](repeating: defaultValue, count: newCapacity)
+
 
         for i in 0..<size {
             newElements[i] = elements[i]
