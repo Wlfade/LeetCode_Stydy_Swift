@@ -12,7 +12,17 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let per1 = Person(10,"kak")
+        let per2 = Person(11,"kd")
+        
+        
+        let list = SingleLinkedList<Person>()
+        list.append(Person(10,"kak"))
+        list.add(per2, at: 0)
+        list.add(per1, at: 1)
+        
+        print(list)
+        print(list.Size())
     }
 
 
