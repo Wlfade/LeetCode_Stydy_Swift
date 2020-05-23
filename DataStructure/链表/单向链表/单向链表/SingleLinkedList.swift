@@ -9,7 +9,7 @@
 import UIKit
 //节点
 public class LinedListNode<T>: NSObject {
-    public typealias Node = LinedListNode<T>
+    public typealias Node = LinedListNode<T> //定义一个别名
 
     var value : T
     var next : LinedListNode?
@@ -22,20 +22,22 @@ public class LinedListNode<T>: NSObject {
 }
 
 class SingleLinkedList<T>: NSObject {
-//    public typealias Node = LinedListNode<T>
-//    private var tail : Node?
-//    private var size : Int = 0
-//    public var isEmpty : Bool {
-//        return head == nil
-//    }
-//
-//    private var first : Node?{
-//        return head
-//    }
     public typealias Node = LinedListNode<T>
-
-    private var head : Node?
+    var head : Node?
     private var size : Int = 0
+//    private var size : Int {
+//        guard var node = head else{
+//            return 0
+//        }
+//        var size = 1
+//        while let next = node.next {
+//            node = next
+//            size += 1
+//        }
+//        return size
+//
+//    }
+
     
     func Size() -> Int{
         return size
@@ -57,6 +59,10 @@ class SingleLinkedList<T>: NSObject {
                     break
                 }
             }
+            
+//            while node != nil {
+//                node = node?.next
+//            }
             return node!
         }
     }
@@ -92,11 +98,74 @@ class SingleLinkedList<T>: NSObject {
             let prev = node(at: index - 1)
             theNode = prev.next!
             prev.next = theNode.next
-            
         }
         size -= 1
         return theNode.value
     }
+    
+    func removeLast() -> T {
+        return remove(at: size-1)
+    }
+    
+    func indexOf(_ element:Person) -> Int {
+        if element == nil {
+            var node = head!
+            for i in 0..<size {
+                let person = node.value as! Person
+                
+                if person.isEqual(element) {
+                    return i
+                }
+                node = node.next!
+            }
+            
+//            while node != nil {
+//                node = node.next!
+//            }
+            
+        }
+        else{
+            var node = head!
+            for i in 0..<size {
+                let person = node.value as! Person
+                if person.isEqual(element) {
+                    return i
+                }
+                node = node.next!
+            }
+            
+        }
+        return -1;
+
+    }
+    
+    //递归翻转
+//    func reverseList(_ head : Node?) -> Node?{
+//        if head == nil || head?.next == nil{
+//            return head
+//        }
+//        var newHead: Node? = self.node(at: 0).next
+//        var p = head
+//        while p != nil {
+//            let tmp = p?.next
+//            p?.next = newHead
+//            newHead = p
+//            p = tmp
+//        }
+//        return newHead
+//    }
+    
+    func reverseList(_ head: Node?) -> Node? {
+      if head == nil || head?.next == nil {
+          return head
+      }
+
+      let newHead = reverseList(head?.next)
+      head?.next?.next = head
+      head?.next = nil
+      return newHead
+     }
+    
     
     override var description:String {
            var s = "["
@@ -108,5 +177,11 @@ class SingleLinkedList<T>: NSObject {
            }
            return s + "]"
        }
+    
+    public subscript(index : Int) ->T{
+        let theNode = node(at: index)
+        return theNode.value
+    }
+    
 }
 
