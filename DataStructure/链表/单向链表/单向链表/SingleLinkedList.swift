@@ -25,6 +25,8 @@ class SingleLinkedList<T>: NSObject {
     public typealias Node = LinedListNode<T>
     var head : Node?
     private var size : Int = 0
+    
+    //这样写只有一个 get方法
 //    private var size : Int {
 //        guard var node = head else{
 //            return 0
@@ -35,7 +37,6 @@ class SingleLinkedList<T>: NSObject {
 //            size += 1
 //        }
 //        return size
-//
 //    }
 
     
@@ -49,6 +50,7 @@ class SingleLinkedList<T>: NSObject {
     }
     //获取节点
     func node(at index : Int) -> Node{
+        rangeCheck(index)
         if index == 0 {
             return head!
         }else{
@@ -75,6 +77,8 @@ class SingleLinkedList<T>: NSObject {
     
     //插入节点
     func add(_ element: T , at index : Int){
+        rangeCheckForAdd(index)
+        
         if index == 0 {
             head = Node(value: element, next: head)
         }else{
@@ -91,6 +95,8 @@ class SingleLinkedList<T>: NSObject {
     }
     //移除节点
     func remove(at index: Int) -> T{
+        rangeCheck(index)
+        
         var theNode = head!
         if index == 0 {
             head = head!.next
@@ -150,5 +156,22 @@ class SingleLinkedList<T>: NSObject {
         return theNode.value
     }
     
+}
+
+extension SingleLinkedList{
+    func outOfBounds(_ index: Int){
+        print("下标Index:\(index),Size:\(size)");
+    }
+    func rangeCheck(_ index : Int){
+        if index < 0 || index >= size {
+            outOfBounds(index)
+        }
+    }
+    func rangeCheckForAdd(_ index : Int){
+        if index < 0 || index > size {
+            outOfBounds(index)
+        }
+    }
+
 }
 
