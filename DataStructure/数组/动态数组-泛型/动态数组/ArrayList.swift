@@ -81,7 +81,7 @@ class ArrayList<T>: NSObject {
             elements[i] = elements[i+1]
         }
         
-        elements[size] = defaultValue//删除元素后，最后一个置为nil
+        elements[size-1] = defaultValue//删除元素后，最后一个置为nil
         size -= 1
         return old
     }
@@ -131,12 +131,8 @@ class ArrayList<T>: NSObject {
         }
         //1.5倍
         let newCapacity : Int = oldCapacity + (oldCapacity >> 1);
-        
-//        var newElements = Array(repeating: 0, count: newCapacity) as? [T]
-//        var newElements = Array(repeating: NSNull.self, count: newCapacity) as? [T]
-        
+                
         var newElements = [T](repeating: defaultValue, count: newCapacity)
-
 
         for i in 0..<size {
             newElements[i] = elements[i]

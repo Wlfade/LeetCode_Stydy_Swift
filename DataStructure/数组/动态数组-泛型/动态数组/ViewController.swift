@@ -18,12 +18,31 @@ class ViewController: UIViewController {
         let p1 = Person(12,"kka1");
         let p2 = Person(13,"kka2");
 
-        let list : ArrayList = ArrayList<Person>(capacity: 10, defaultValue: p)
+        let list : ArrayList2 = ArrayList2<Person>(capacity: 10, defaultValue: p)
         list.add(p1)
         list.add(p2)
-        let p4 = list.remove(0)
-        print(list.contains(p4))
-        print(list.contains(p2))
+        list.add(p2)
+        list.add(p2)
+        list.add(p2)
+        list.add(p2)
+        list.add(p2)
+        list.add(p2)
+        list.add(p2)
+        list.add(p2)
+        list.add(p2)
+        list.add(p2)
+        list.add(p2)
+        list.add(p2)
+        list.add(p2)
+        list.add(p2)
+        list.add(p2)
+
+        list.remove(0)
+        list.remove(0)
+        list.remove(0)
+        list.remove(0)
+        list.remove(0)
+        list.remove(0)
     }
 
 
