@@ -26,8 +26,36 @@ class SingleLinkedList<T>: NSObject {
     public typealias Node = LinedListNode<T>
     var first : Node?
     var last : Node?
-
+    var current : Node?
     private var size : Int = 0
+
+    //重置
+    public func reset(){
+        current = first
+    }
+    //current 往后走
+    public func next() -> T?{
+        if current == nil {
+            return nil
+        }
+        current = current?.next
+        return current?.value
+    }
+    //删除current结点
+    public func remove() -> T?{
+        if current == nil {
+            return nil
+        }else{
+            let next = current?.next //删除之前拿到下一个
+            let element = remove(theNode: current) //被删除结点的内容
+            if size == 0 {
+                current = nil
+            }else{
+                current = next
+            }
+            return element
+        }
+    }
 
     func Size() -> Int{
         return size
@@ -74,12 +102,15 @@ class SingleLinkedList<T>: NSObject {
         
         if index == size {
             let oldLast = last
-            last = Node(prev: oldLast, value: element, next: nil)
+            last = Node(prev: oldLast, value: element, next: first)
             if oldLast == nil {
                 //添加的第一个元素
                 first = last
+                first?.next = first
+                first?.next = first
             }else{
                 oldLast?.next = last
+                first?.prev = last
             }
         }
         else{
@@ -87,10 +118,9 @@ class SingleLinkedList<T>: NSObject {
             let prev = next.prev
             let node = Node(prev: prev, value: element, next: next)
             next.prev = node
-            if prev == nil {
+            prev?.next = node
+            if next == first { //index = 0 插入 0 变成头结点
                 first = node
-            }else{
-                prev?.next = node
             }
             
         }
@@ -101,45 +131,54 @@ class SingleLinkedList<T>: NSObject {
         add(element, at: size)
         
     }
+    
+    
     //移除节点
-    func remove(at index: Int) -> T{
+    func remove(at index: Int) -> T?{
         rangeCheck(index)
-        
-        let theNode = node(at: index)
-        let prev = theNode.prev
-        let next = theNode.next
-        
-        if prev == nil {
-            first = next
-        }else{
-            prev?.next = next
-        }
-        
-        if next == nil {
-            last = prev
-        }else{
-            next?.prev = prev
-        }
-        
-        size -= 1
-        return theNode.value
+        return remove(theNode: node(at: index))
     }
     
-    func removeLast() -> T {
-        return remove(at: size-1)
+    func remove(theNode:Node?)->T?{
+        if size == 1 {
+            first = nil
+            last = nil
+        }else{
+            let prev = theNode?.prev
+            let next = theNode?.next
+            prev?.next = next
+            next?.prev = prev
+
+            if theNode == first {
+                first = next
+            }
+            
+            if theNode == last {
+                last = prev
+            }
+
+        }
+        size -= 1
+        return theNode?.value
+    }
+    
+    func removeLast() -> T?{
+        return remove(theNode: node(at: size-1))
     }
     
     override var description:String {
-           var s = "["
-           var node = self.first
-           while node != nil {
-               s += "\(node!.value)"
-               node = node!.next
-               if node != nil { s += ", "}
-           }
-           return s + "]"
+        var s = "["
+        var node = self.first
+        for i in 0..<size {
+            s += "\(node!.value)"
+            node = node!.next
+            if i != size-1 {
+                s+=", "
+            }
+        }
+        return s + "]"
        }
-    
+
     public subscript(index : Int) ->T{
         let theNode = node(at: index)
         return theNode.value
