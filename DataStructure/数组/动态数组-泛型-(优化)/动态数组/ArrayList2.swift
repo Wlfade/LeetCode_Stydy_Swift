@@ -49,8 +49,8 @@ class ArrayList2<T>: NSObject {
         rangeCheckForAdd(index)
         ensureCapacity(capacity: size + 1) //确保容量足够大
         
-        for i in (1 ..< elements.count-1).reversed(){
-            elements[i+1] = elements![i];
+        for i in (index ..< size).reversed(){
+            elements[i] = elements![i-1];
         }
         elements[index] = element
         size += 1
@@ -80,12 +80,9 @@ class ArrayList2<T>: NSObject {
         for i in index..<size-1 {
             elements[i] = elements[i+1]
         }
-        
         elements[size-1] = defaultValue//删除元素后，最后一个置为nil
         size -= 1
-        
         trim()
-
         return old
     }
     

@@ -77,7 +77,7 @@ class ArrayList: NSObject {
     func remove(_ index : Int)->Int{
         rangeCheck(index)
         let old = elements[index]
-        for i in 0..<size-1 {
+        for i in index..<size-1 {
             elements[i] = elements[i+1]
         }
         elements[size - 1] = 0//删除元素后，最后一个置为nil

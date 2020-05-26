@@ -38,7 +38,9 @@ class SingleLinkedList<T>: NSObject {
 //        }
 //        return size
 //    }
-
+    func isEmpty() -> Bool {
+        return size == 0
+    }
     
     func Size() -> Int{
         return size

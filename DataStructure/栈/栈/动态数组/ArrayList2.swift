@@ -23,7 +23,7 @@ class ArrayList2<T>: NSObject {
         self.elements = [T](repeating: defaultValue, count: temp)
 //        elements = Array(repeating: "", count: temp) as? [T]
     }
-    
+        
     /// 元素的数量
     /// - Returns: 元素的数量
     func Size() -> Int {
@@ -49,8 +49,8 @@ class ArrayList2<T>: NSObject {
         rangeCheckForAdd(index)
         ensureCapacity(capacity: size + 1) //确保容量足够大
         
-        for i in (1 ..< elements.count-1).reversed(){
-            elements[i+1] = elements![i];
+        for i in (index ..< size).reversed(){
+            elements[i] = elements![i-1];
         }
         elements[index] = element
         size += 1
@@ -60,9 +60,12 @@ class ArrayList2<T>: NSObject {
         insert(size, element);
     }
     /// 数据获取
-    func get(_ index : Int) -> T{
+    func get(_ index : Int) -> T?{
         rangeCheck(index)
-        return elements[index]
+        if index >= 0 {
+            return elements[index]
+        }
+        return nil
     }
     
     /// 设置index位置的元素
@@ -80,12 +83,10 @@ class ArrayList2<T>: NSObject {
         for i in index..<size-1 {
             elements[i] = elements[i+1]
         }
-        
         elements[size-1] = defaultValue//删除元素后，最后一个置为nil
         size -= 1
-        
         trim()
-
+        
         return old
     }
     
@@ -146,10 +147,13 @@ class ArrayList2<T>: NSObject {
     
     func trim(){
         let oldCapacity = elements.count
-        let newCapacity = oldCapacity >> 1
+        var newCapacity = oldCapacity >> 1
         if size > newCapacity || oldCapacity <= DEFAULT_CAPACITY {
             return
         }
+        
+        newCapacity = (newCapacity < DEFAULT_CAPACITY) ? DEFAULT_CAPACITY : newCapacity
+
         //空间很多需要缩容
         var newElements = [T](repeating: defaultValue, count: newCapacity)
         for i in 0..<size {
@@ -162,6 +166,7 @@ class ArrayList2<T>: NSObject {
     
     func outOfBounds(_ index: Int){
         print("下标Index:\(index),Size:\(size)");
+        return
     }
     func rangeCheck(_ index : Int){
         if index < 0 || index >= size {
