@@ -16,7 +16,9 @@ class BinarySearchTreeNew<T:Comparable> : BinaryTree<T>{
     public convenience init(_ array : [T]){
         precondition(array.count > 0)
         self.init()
-        
+        for v in array {
+            add(value: v)
+        }
     }
 }
 

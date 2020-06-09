@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		40510BD6248774810012E273 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40510BD5248774810012E273 /* AppDelegate.swift */; };
+		40510BD8248774810012E273 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40510BD7248774810012E273 /* SceneDelegate.swift */; };
+		40510BDA248774810012E273 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40510BD9248774810012E273 /* ViewController.swift */; };
+		40510BDD248774810012E273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40510BDB248774810012E273 /* Main.storyboard */; };
+		40510BDF248774840012E273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40510BDE248774840012E273 /* Assets.xcassets */; };
+		40510BE2248774840012E273 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40510BE0248774840012E273 /* LaunchScreen.storyboard */; };
+		40510BED248774840012E273 /* AVL_TreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40510BEC248774840012E273 /* AVL_TreeTests.swift */; };
+		40510BF8248774840012E273 /* AVL_TreeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40510BF7248774840012E273 /* AVL_TreeUITests.swift */; };
+		40510C1924877D940012E273 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40510C1624877D940012E273 /* BinaryTree.swift */; };
+		40510C1C24877DDD0012E273 /* AVLTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40510C1B24877DDD0012E273 /* AVLTree.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		40510BE9248774840012E273 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40510BCA248774810012E273 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40510BD1248774810012E273;
+			remoteInfo = "AVL-Tree";
+		};
+		40510BF4248774840012E273 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40510BCA248774810012E273 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40510BD1248774810012E273;
+			remoteInfo = "AVL-Tree";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		40510BD2248774810012E273 /* AVL-Tree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AVL-Tree.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40510BD5248774810012E273 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		40510BD7248774810012E273 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		40510BD9248774810012E273 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		40510BDC248774810012E273 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		40510BDE248774840012E273 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		40510BE1248774840012E273 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		40510BE3248774840012E273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40510BE8248774840012E273 /* AVL-TreeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AVL-TreeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40510BEC248774840012E273 /* AVL_TreeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVL_TreeTests.swift; sourceTree = "<group>"; };
+		40510BEE248774840012E273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40510BF3248774840012E273 /* AVL-TreeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AVL-TreeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40510BF7248774840012E273 /* AVL_TreeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVL_TreeUITests.swift; sourceTree = "<group>"; };
+		40510BF9248774840012E273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40510C1624877D940012E273 /* BinaryTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
+		40510C1B24877DDD0012E273 /* AVLTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVLTree.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		40510BCF248774810012E273 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40510BE5248774840012E273 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40510BF0248774840012E273 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40510BC9248774810012E273 = {
+			isa = PBXGroup;
+			children = (
+				40510BD4248774810012E273 /* AVL-Tree */,
+				40510BEB248774840012E273 /* AVL-TreeTests */,
+				40510BF6248774840012E273 /* AVL-TreeUITests */,
+				40510BD3248774810012E273 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		40510BD3248774810012E273 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40510BD2248774810012E273 /* AVL-Tree.app */,
+				40510BE8248774840012E273 /* AVL-TreeTests.xctest */,
+				40510BF3248774840012E273 /* AVL-TreeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40510BD4248774810012E273 /* AVL-Tree */ = {
+			isa = PBXGroup;
+			children = (
+				40510C1624877D940012E273 /* BinaryTree.swift */,
+				40510BD5248774810012E273 /* AppDelegate.swift */,
+				40510BD7248774810012E273 /* SceneDelegate.swift */,
+				40510BD9248774810012E273 /* ViewController.swift */,
+				40510BDB248774810012E273 /* Main.storyboard */,
+				40510BDE248774840012E273 /* Assets.xcassets */,
+				40510BE0248774840012E273 /* LaunchScreen.storyboard */,
+				40510BE3248774840012E273 /* Info.plist */,
+				40510C1B24877DDD0012E273 /* AVLTree.swift */,
+			);
+			path = "AVL-Tree";
+			sourceTree = "<group>";
+		};
+		40510BEB248774840012E273 /* AVL-TreeTests */ = {
+			isa = PBXGroup;
+			children = (
+				40510BEC248774840012E273 /* AVL_TreeTests.swift */,
+				40510BEE248774840012E273 /* Info.plist */,
+			);
+			path = "AVL-TreeTests";
+			sourceTree = "<group>";
+		};
+		40510BF6248774840012E273 /* AVL-TreeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				40510BF7248774840012E273 /* AVL_TreeUITests.swift */,
+				40510BF9248774840012E273 /* Info.plist */,
+			);
+			path = "AVL-TreeUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		40510BD1248774810012E273 /* AVL-Tree */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40510BFC248774840012E273 /* Build configuration list for PBXNativeTarget "AVL-Tree" */;
+			buildPhases = (
+				40510BCE248774810012E273 /* Sources */,
+				40510BCF248774810012E273 /* Frameworks */,
+				40510BD0248774810012E273 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AVL-Tree";
+			productName = "AVL-Tree";
+			productReference = 40510BD2248774810012E273 /* AVL-Tree.app */;
+			productType = "com.apple.product-type.application";
+		};
+		40510BE7248774840012E273 /* AVL-TreeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40510BFF248774840012E273 /* Build configuration list for PBXNativeTarget "AVL-TreeTests" */;
+			buildPhases = (
+				40510BE4248774840012E273 /* Sources */,
+				40510BE5248774840012E273 /* Frameworks */,
+				40510BE6248774840012E273 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40510BEA248774840012E273 /* PBXTargetDependency */,
+			);
+			name = "AVL-TreeTests";
+			productName = "AVL-TreeTests";
+			productReference = 40510BE8248774840012E273 /* AVL-TreeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		40510BF2248774840012E273 /* AVL-TreeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40510C02248774840012E273 /* Build configuration list for PBXNativeTarget "AVL-TreeUITests" */;
+			buildPhases = (
+				40510BEF248774840012E273 /* Sources */,
+				40510BF0248774840012E273 /* Frameworks */,
+				40510BF1248774840012E273 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40510BF5248774840012E273 /* PBXTargetDependency */,
+			);
+			name = "AVL-TreeUITests";
+			productName = "AVL-TreeUITests";
+			productReference = 40510BF3248774840012E273 /* AVL-TreeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		40510BCA248774810012E273 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "王玲峰";
+				TargetAttributes = {
+					40510BD1248774810012E273 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					40510BE7248774840012E273 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 40510BD1248774810012E273;
+					};
+					40510BF2248774840012E273 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 40510BD1248774810012E273;
+					};
+				};
+			};
+			buildConfigurationList = 40510BCD248774810012E273 /* Build configuration list for PBXProject "AVL-Tree" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 40510BC9248774810012E273;
+			productRefGroup = 40510BD3248774810012E273 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				40510BD1248774810012E273 /* AVL-Tree */,
+				40510BE7248774840012E273 /* AVL-TreeTests */,
+				40510BF2248774840012E273 /* AVL-TreeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		40510BD0248774810012E273 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40510BE2248774840012E273 /* LaunchScreen.storyboard in Resources */,
+				40510BDF248774840012E273 /* Assets.xcassets in Resources */,
+				40510BDD248774810012E273 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40510BE6248774840012E273 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40510BF1248774840012E273 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		40510BCE248774810012E273 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40510BDA248774810012E273 /* ViewController.swift in Sources */,
+				40510C1C24877DDD0012E273 /* AVLTree.swift in Sources */,
+				40510BD6248774810012E273 /* AppDelegate.swift in Sources */,
+				40510C1924877D940012E273 /* BinaryTree.swift in Sources */,
+				40510BD8248774810012E273 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40510BE4248774840012E273 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40510BED248774840012E273 /* AVL_TreeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40510BEF248774840012E273 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40510BF8248774840012E273 /* AVL_TreeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		40510BEA248774840012E273 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40510BD1248774810012E273 /* AVL-Tree */;
+			targetProxy = 40510BE9248774840012E273 /* PBXContainerItemProxy */;
+		};
+		40510BF5248774840012E273 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40510BD1248774810012E273 /* AVL-Tree */;
+			targetProxy = 40510BF4248774840012E273 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		40510BDB248774810012E273 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40510BDC248774810012E273 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		40510BE0248774840012E273 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40510BE1248774840012E273 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		40510BFA248774840012E273 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		40510BFB248774840012E273 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		40510BFD248774840012E273 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "AVL-Tree/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wlfggg.AVL-Tree";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		40510BFE248774840012E273 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "AVL-Tree/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wlfggg.AVL-Tree";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		40510C00248774840012E273 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "AVL-TreeTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wlfggg.AVL-TreeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AVL-Tree.app/AVL-Tree";
+			};
+			name = Debug;
+		};
+		40510C01248774840012E273 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "AVL-TreeTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wlfggg.AVL-TreeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AVL-Tree.app/AVL-Tree";
+			};
+			name = Release;
+		};
+		40510C03248774840012E273 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "AVL-TreeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wlfggg.AVL-TreeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "AVL-Tree";
+			};
+			name = Debug;
+		};
+		40510C04248774840012E273 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "AVL-TreeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wlfggg.AVL-TreeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "AVL-Tree";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		40510BCD248774810012E273 /* Build configuration list for PBXProject "AVL-Tree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40510BFA248774840012E273 /* Debug */,
+				40510BFB248774840012E273 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40510BFC248774840012E273 /* Build configuration list for PBXNativeTarget "AVL-Tree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40510BFD248774840012E273 /* Debug */,
+				40510BFE248774840012E273 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40510BFF248774840012E273 /* Build configuration list for PBXNativeTarget "AVL-TreeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40510C00248774840012E273 /* Debug */,
+				40510C01248774840012E273 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40510C02248774840012E273 /* Build configuration list for PBXNativeTarget "AVL-TreeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40510C03248774840012E273 /* Debug */,
+				40510C04248774840012E273 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 40510BCA248774810012E273 /* Project object */;
+}
